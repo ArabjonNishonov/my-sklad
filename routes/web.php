@@ -14,6 +14,10 @@ Route::get('/dashboard')->middleware(['auth', 'verified'])->name('dashboard');
 Route::get('/salom', function () {
     return "salom";
 });
+
+Route::get('/xayr', function () {
+    return "xayr";
+});
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
