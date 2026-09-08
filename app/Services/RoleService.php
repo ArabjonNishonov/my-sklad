@@ -23,5 +23,10 @@ class RoleService
         $user->removeRole($user->roles->first());
     }
 
+    public function assignRole($user,$data)
+    {
+        $user->assignRole($data['role']);
+    }
+
 
 }
